@@ -1,0 +1,31 @@
+{
+    "name": "Highlight some phrases",
+    "description": "Hightlight some pre defined text from websql database after page loads",
+    "version": "0.1",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "<all_urls>"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end" // pay attention to this line
+        }
+    ],
+    "manifest_version": 2
+}
