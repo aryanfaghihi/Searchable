@@ -2,6 +2,9 @@
   "name": "Searchable",
   "version": "0.0.1",
   "dependencies": {
-    "handbrake-js": "^2.1.0"
+    "crypto": "0.0.3",
+    "express": "^4.15.2",
+    "handbrake-js": "^2.1.0",
+    "watson-developer-cloud": "^2.28.1"
   }
 }

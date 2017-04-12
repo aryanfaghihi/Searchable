@@ -1,6 +1,6 @@
 var hbjs = require("handbrake-js");
 
-hbjs.spawn({input: "small.mp4", output: "small.flac"})
+hbjs.spawn({input: "lecture.mp4", output: "lecture.flac"})
     .on("error", function (err) {
         // invalid user input, no video found etc
         console.log(err);
