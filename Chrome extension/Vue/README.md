@@ -1,6 +1,4 @@
-# vue chrome extension example
-
-develop chrome extension with vue
+# Searchable Chrome Extension in Vue 
 
 ## Installation
 
@@ -8,61 +6,15 @@ develop chrome extension with vue
 
 ## Usage
 
-Run `$ gulp --watch` and load the `dist`-directory into chrome.
-
-## Entryfiles (bundles)
-
-There are two kinds of entryfiles that create bundles.
-
-1. All js-files in the root of the `./app/scripts` directory
-2. All css-,scss- and less-files in the root of the `./app/styles` directory
-
-## Tasks
-
-### Build
-
-    $ gulp
+    $ gulp --watch
 
 
-| Option         | Description                                                                                                                                           |
-|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--watch`      | Starts a livereload server and watches all assets. <br>To reload the extension on change include `livereload.js` in your bundle.                      |
-| `--production` | Minifies all assets                                                                                                                                   |
-| `--verbose`    | Log additional data to the console.                                                                                                                   |
-| `--vendor`     | Compile the extension for different vendors (chrome, firefox, opera)  Default: chrome                                                                 |
-| `--sourcemaps` | Force the creation of sourcemaps. Default: !production                                                                                                |
+Note: If you don't have gulp installed you need to install it via "npm i -g gulp"
 
+## Load extension in Chrome
 
-### pack
-
-Zips your `dist` directory and saves it in the `packages` directory.
-
-    $ gulp pack --vendor=firefox
-
-### Version
-
-Increments version number of `manifest.json` and `package.json`,
-commits the change to git and adds a git tag.
-
-
-    $ gulp patch      // => 0.0.X
-
-or
-
-    $ gulp feature    // => 0.X.0
-
-or
-
-    $ gulp release    // => X.0.0
-
-
-## Globals
-
-The build tool also defines a variable named `ENV` in your scripts. It will be set to `development` unless you use the `--production` option.
-
-
-**Example:** `./app/background.js`
-
-	if(ENV === 'development'){
-		console.log('We are in development mode!');
-	}
+1. Open Chrome extensions: `chrome://extensions/`
+2. Activate Developer mode
+3. Click on **Load unpacked extension…**
+4. Navigate to `path/to/Searchable/Chrome extension/Vue/dist/chrome` and click **ok**
+5. You can now open https://echo360.org.au/home and see the search box right next to the Welcome message at the top.
