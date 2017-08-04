@@ -12,3 +12,7 @@ for (var i = 0; i < videoArray.length; i++) {
 chrome.runtime.sendMessage({ videoUrls: modifiedVideoUrls }, function (response) {
     console.log(response);
 });
+
+var div = document.createElement("Input");
+div.id = 'searchbox'
+document.getElementsByClassName("home-header")[0].appendChild(div);
