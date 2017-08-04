@@ -1,0 +1,8 @@
+.Searchbox {
+  text-align: center;
+}
+
+.Searchbox-Component {
+  max-width: 400px; 
+  margin-top: 10px;
+}
